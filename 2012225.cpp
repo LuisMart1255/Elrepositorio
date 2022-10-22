@@ -3,141 +3,119 @@
 
 using namespace std;
 
-string vacio[3];									//string que guarda solo los datos que van en cout << "Favor de presionar enter 2 veces.." //
 string nombres[3];
 string caracteristicas[3];
 string genero[3];
+string anio[3];
+string precio[3];
 int id = 1;
 int op;
 bool a = true;
 
-void agregar();
-void mostrar();
-void limpiar();
-
 void main() {
-	
-	system("color 79");
 	
 	while (a) {
 	
 		cout << "Menu" << endl;
-		cout << "1.Agregar" << endl;
-		cout << "2.Mostrar" << endl;
-		cout << "3.Limpiar" << endl;
-		cout << "4.Salir" << endl;
+		cout << "1.Agregar juegos" << endl;
+		cout << "2.Mostrar juegos" << endl;
+		cout << "3.Limpiar pantalla" << endl;
+		cout << "4.Salir del programa" << endl;
 		cin >> op;
+		cin.ignore();
 
 		switch (op)
 		{
 		case 1:
-			void agregar();
+			system("cls");
+			for (int i = 0; i < 3; i++)
 			{
-				system("cls");
-				for (int i = 0; i < 3; i++)
-				{
-					cout << "Favor de presionar enter 2 veces.. " << i + 1 << ": ";			//error de programa hace que en la consola aparezca la misma frase dos veces seguidas, solo con la primer serie de comandos//	
-					getline(cin, vacio[i]);
-				}
-				for (int i = 0; i < 3; i++)
-				{
-					cout << id + i << ": " << vacio[i] << endl;
-				}
-				for (int i = 0; i < 3; i++)
-				{
-					cout << "Ingresa nombres. " << i + 1 << ": ";
-					getline(cin, nombres[i]);
-				}
-				for (int i = 0; i < 3; i++)
-				{
-					cout << id + i << ": " << nombres[i] << endl;
-				}
-				for (int i = 0; i < 3; i++)
-				{
-					cout << "Ingresa caracteristicas. " << i + 1 << ": ";
-					getline(cin, caracteristicas[i]);
-				}
-				for (int i = 0; i < 3; i++)
-				{
-					cout << id + i << ": " << caracteristicas[i] << endl;
-				}
-				for (int i = 0; i < 3; i++)
-				{
-					cout << "Ingresa genero. " << i + 1 << ": ";
-					getline(cin, genero[i]);
-				}
-				for (int i = 0; i < 3; i++)
-				{
-					cout << id + i << ": " << genero[i] << endl;
-				}
-				system("cls");
+				cout << "Ingresa nombres. " << i + 1 << ": ";
+				getline(cin, nombres[i]);
 			}
+			for (int i = 0; i < 3; i++)
+			{
+				cout << id + i << ": " << nombres[i] << endl;
+			}
+			for (int i = 0; i < 3; i++)
+			{
+				cout << "Ingresa caracteristicas. " << i + 1 << ": ";
+				getline(cin, caracteristicas[i]);
+			}
+			for (int i = 0; i < 3; i++)
+			{
+				cout << id + i << ": " << caracteristicas[i] << endl;
+			}
+			for (int i = 0; i < 3; i++)
+			{
+				cout << "Ingresa genero. " << i + 1 << ": ";
+				getline(cin, genero[i]);
+			}
+			for (int i = 0; i < 3; i++)
+			{
+				cout << id + i << ": " << genero[i] << endl;
+			}
+			for (int i = 0; i < 3; i++)
+			{
+				cout << "Ingresa anio. " << i + 1 << ": ";
+				getline(cin, anio[i]);
+			}
+			for (int i = 0; i < 3; i++)
+			{
+				cout << id + i << ": " << anio[i] << endl;
+			}
+			for (int i = 0; i < 3; i++)
+			{
+				cout << "Ingresa precio. " << i + 1 << ": ";
+				getline(cin, precio[i]);
+			}
+			for (int i = 0; i < 3; i++)
+			{
+				cout << id + i << ": " << precio[i] << endl;
+			}
+			system("cls");
 			break;
 
 		case 2:
-
-			void mostrar();
+			system("cls");
+			cout << "Lista de juegos. " << endl;
+			for (int i = 0; i < 3; i++)
 			{
-				system("cls");
-				cout << "Lista de juegos. " << endl;
-				for (int i = 0; i < 3; i++)
-				{
-					cout << id + i << ": " << nombres[i] << endl;
-				}
-				cout << "Lista de caracteristicas. " << endl;
-				for (int i = 0; i < 3; i++)
-				{
-					cout << id + i << ": " << caracteristicas[i] << endl;
-				}
-				cout << "Lista de generos. " << endl;
-				for (int i = 0; i < 3; i++)
-				{
-					cout << id + i << ": " << genero[i] << endl;
-				}
+				cout << id + i << ": " << nombres[i] << endl;
 			}
-
+			cout << "Lista de caracteristicas. " << endl;
+			for (int i = 0; i < 3; i++)
+			{
+				cout << id + i << ": " << caracteristicas[i] << endl;
+			}
+			cout << "Lista de generos. " << endl;
+			for (int i = 0; i < 3; i++)
+			{
+				cout << id + i << ": " << genero[i] << endl;
+			}
+			cout << "Lista de anios. " << endl;
+			for (int i = 0; i < 3; i++)
+			{
+				cout << id + i << ": " << anio[i] << endl;
+			}
+			cout << "Lista de precios. " << endl;
+			for (int i = 0; i < 3; i++)
+			{
+				cout << id + i << ": " << precio[i ] << endl;
+			}
 			break;
-
+		
 		case 3:
-
-			void limpiar();
-			{
-				system("cls");
-			}
-			
+			system("cls");
+			break;
+		
+		case 4:
+			a = false;
 			break;
 
 		default:
-			a = false;
+			cout << "error, intente con un numero valido" << endl;
 			break;
 		}
 	}
 }
-//Codigos de prueba//
-//void agregar() {
-//
-//	for (int i = 0; i < 3; i++)
-//	{
-//		getline(cin, nombres[i]);
-//	}
-//	for (int i = 0; i < 3; i++)
-//	{
-//		cout << id + i << ": " << nombres[i] << endl;
-//	}
-//	system("pause");
-//}
-////
-//void mostrar() {
-//
-//	cout << "Lista de juegos. " << endl;
-//	for (int i = 0; i < 3; i++)
-//	{
-//		cout << id + i << ": " << nombres[i] << endl;
-//	}
-//}
-//
-//void limpiar() {
-//
-//	system("cls");
-//
-//}
